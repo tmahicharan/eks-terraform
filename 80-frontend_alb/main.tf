@@ -68,7 +68,7 @@ resource "aws_lb_target_group" "frontend" {
 }
 
 resource "aws_lb_listener_rule" "frontend" {
-  listener_arn = aws_lb_listener.ingress_alb.arn
+  listener_arn = aws_lb_listener.ingress_listener.arn
   priority     = 10
 
   action {
