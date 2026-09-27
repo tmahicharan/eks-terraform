@@ -105,7 +105,7 @@ pipeline {
         stage('ALB'){
             steps {
                 script {
-                    build job: '80-frontend-alb',
+                    build job: '80-frontend_alb',
                         wait: false, // Wait for completion
                         propagate: false // Propagate status
                 }
