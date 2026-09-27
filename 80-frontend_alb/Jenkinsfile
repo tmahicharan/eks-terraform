@@ -21,7 +21,7 @@ pipeline {
                 script{
                     withAWS(region:'us-east-1',credentials:'aws-auth') {
                         sh """
-                            cd 80-frontend-alb
+                            cd 80-frontend_alb
                             terraform init
                         """
                     }
@@ -33,7 +33,7 @@ pipeline {
                 script{
                     withAWS(region:'us-east-1',credentials:'aws-auth') {
                         sh """
-                            cd 80-frontend-alb
+                            cd 80-frontend_alb
                             terraform plan
                         """
                     }
@@ -46,7 +46,7 @@ pipeline {
                 script{
                     withAWS(region:'us-east-1',credentials:'aws-auth') {
                         sh """
-                            cd 80-frontend-alb
+                            cd 80-frontend_alb
                             terraform apply -auto-approve
                         """
                     }
